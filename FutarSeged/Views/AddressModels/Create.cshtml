@@ -1,0 +1,53 @@
+﻿@model FutarSeged.Models.AddressModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>AddressModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="AddressPostCode" class="control-label"></label>
+                <input asp-for="AddressPostCode" class="form-control" />
+                <span asp-validation-for="AddressPostCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AddressCity" class="control-label"></label>
+                <input asp-for="AddressCity" class="form-control" />
+                <span asp-validation-for="AddressCity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AddressStreetName" class="control-label"></label>
+                <input asp-for="AddressStreetName" class="form-control" />
+                <span asp-validation-for="AddressStreetName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AddressHouseNumber" class="control-label"></label>
+                <input asp-for="AddressHouseNumber" class="form-control" />
+                <span asp-validation-for="AddressHouseNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AddressDescription" class="control-label"></label>
+                <input asp-for="AddressDescription" class="form-control" />
+                <span asp-validation-for="AddressDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

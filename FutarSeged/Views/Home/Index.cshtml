@@ -1,0 +1,19 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@{
+    ViewData["Title"] = "Futár segéd a szállításhoz";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Üdvözöllek</h1>
+
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <h4> Kérjük a fentebb lévő menüből válassza ki mit szeretne</h4>}
+    else
+    {
+        <h4> Rendelni és szállítási címet megadni regisztráció majd bejelentkezés után lehet</h4>}
+
+</div>
